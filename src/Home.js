@@ -1,5 +1,6 @@
 import { LoremIpsum, Avatar } from 'react-lorem-ipsum';
 import  {useState} from 'react';
+import BlogList from './Blog-list';
 const Home = () => {
     const [blogs, setBlogs] = useState([
         {title: 'My New Website', body: <LoremIpsum p={2}/>, author: 'Mario', id:1},
@@ -8,13 +9,8 @@ const Home = () => {
     ]);
     return (
         <div className="home">
-            {blogs.map((blogs) => (
-                <div className="blog-preview" key={blogs.id}>
-                    <h2>{blogs.title}</h2>
-                    <p>Written by: {blogs.author}</p>
-                    <p>{blogs.body}</p>
-                </div>
-            ))}
+            <BlogList blogs={blogs} title="My Blogs!"></BlogList>
+            {/* props */}
         </div>
     );
 }

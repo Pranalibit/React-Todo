@@ -49,5 +49,5 @@
   font-size: 20px;
 }
 .blog-preview:hover{
-  box-shadow:gray 2px 3px 2px;
+  box-shadow:gray 2px 3px 2px 4px;
 }
